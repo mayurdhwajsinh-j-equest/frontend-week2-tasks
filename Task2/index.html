@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Responsive Layout</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="logo-menu">
+                <li><a href="#" class="logo">Startup 3</a></li>
+                <li><a href="#" class="menu" ><img src="icons/menu-svgrepo-com.svg" ></a></li>
+            </ul>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#"><img src="icons/fa-search.svg"></a></li>
+            </ul>
+            <ul class="auth">
+                <li><a href="#">Sign In</a></li>
+                <li><a href="#" class="signup">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="content-container">
+            <h1>Startup Framework</h1>
+            <p class="p1">We made it so beutiful and simple. It combines landings, pages, blogs and shop screens. It is definitely the tool you need in your collection! </p>
+        </div>
+            <a href="#" class="purchase-btn">Purchase Now for $248</a>
+            <a href="#" class="learn-more">Learn More</a>
+    </main>
+    <footer>
+        <div class="footer-section1">
+            <H3>Startup 3</H3>
+            <p>Be sure to take a look at our Terms of Use and Privacy Policy</p>
+            <ul class="social-links">
+                <li><a href="#"><img src="icons/fa-twitter.svg" alt="Socials-links" style="margin-top: 20px ;"></a></li>
+                <li><a href="#"><img src="icons/fa-facebook-square.svg" alt="Socials-links" style="margin-top: 20px ;"></a></li>
+                <li><a href="#"><img src="icons/fa-google-plus.svg" alt="Socials-links" style="margin-top: 20px ;"></a></li>
+            </ul>
+        </div>
+        <div>
+            <ul class="link">
+                <li><a href="#">Product</a></li>
+            </ul>
+            <ul class="links">
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Tour</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul class="link">
+                <li><a href="#">Work</a></li>
+            </ul>
+            <ul class="links">
+                <li><a href="#">Our Portfolio</a></li>
+                <li><a href="#">Lastest Work</a></li>
+                <li><a href="#">Brands</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul class="link">
+                <li><a href="#">Stuff</a></li>
+            </ul>
+            <ul class="links">
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Help Desk</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </div>
+        <div class="footer-last-col">
+            <div>
+                <img src="icons/fa-flag.svg">
+            </div>            
+            <select id="languages">
+                    <option>English</option>
+                    <option>Hindi</option>
+                    <option>Gujarati</option>
+            </select> 
+        </div>
+    </footer>
+    <script>
+        $(document).ready(function(){
+            $(".menu").click(function(){
+                $(".nav-links").toggle();
+                // $(".nav-links").css({"background-color":"lightgray","display":"flex","margin":"0","padding":"0"});
+                $(".auth").toggle();
+                // $(".auth").css({"background-color":"lightgray","display":"flex"})
+            })
+        })
+    </script>
+</body>
+</html>

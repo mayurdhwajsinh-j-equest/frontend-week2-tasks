@@ -1,0 +1,158 @@
+*
+{
+    font-family: sans-serif;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+nav{
+    display : flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #1E0E62;
+    margin-top: 30px ;
+}
+.nav-links,.auth
+{
+    display: flex;
+    gap: 60px;
+    font-size: 16px;
+}
+.logo
+{
+    font-size: 24px;
+    font-weight: bold;
+}
+.signup
+{
+    border: 1px solid none;
+    background-color: #1E0E62;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 20px;
+}
+main
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.content-container
+{
+    max-width: 550px;
+}
+h1{
+    font-size: 58px;
+    color: #1E0E62;
+    font-weight: bolder;
+    margin-top: 50px;
+}
+.p1{
+    font-size: 22px;
+    color: #15143966;
+    text-align: center;
+}
+.purchase-btn
+{
+    background-color: #1E0E62;
+    color: white;
+    padding: 20px 55px;
+    border-radius: 40px;
+    font-size: 20px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.learn-more
+{
+    font-size: 18px;
+}
+footer
+{
+    background-color: #1E0E62;
+    color: white;
+    display : flex;
+    justify-content: space-evenly;
+    align-items: flex-start;    
+    padding: 50px 200px; 
+    margin-top: 100px; 
+}
+.menu
+{
+    display: none;
+    height: 30px;
+    width: 60px;
+}
+.link a,.links a{
+    color: white;
+}
+.footer-section1{
+    max-width: 180px;
+}
+.links{
+    line-height: 45px;
+}
+.footer-last-col,.social-links
+{
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+}
+
+@media only screen and (max-width:600px){
+    header,main
+    {
+        flex-direction: column;     
+    }
+    nav
+    {
+        flex-direction: row  ;
+        flex-wrap: wrap;
+    }
+    h1{
+        font-size: 28px;
+    }
+    .p1{
+        font-size: 15px;
+    }
+    .purchase-btn
+    {
+        max-width: 90%;
+        font-size : 16px;
+    }
+    .nav-links,.auth
+    {      
+        display: none;
+    }
+    .menu
+    {
+        display: flex;
+    }
+    .logo-menu
+    {
+        display: flex;
+        gap: 250px;
+        justify-content: flex-start;
+    }
+    footer{
+        display: grid;
+        padding: 0px 20px;
+        gap: 20px;
+        grid-template-columns: 1fr 1fr;
+    }
+    .links{
+       line-height: 25px;   
+    }
+    .footer-last-col,.social-links
+    {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+}
