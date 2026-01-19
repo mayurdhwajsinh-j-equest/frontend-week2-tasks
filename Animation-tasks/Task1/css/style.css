@@ -9,8 +9,10 @@
 .container__element{
     height: 400px;
     width: 600px;
+    overflow: hidden;
     background-color: rgb(39, 37, 37);
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
 }
@@ -20,12 +22,41 @@
     font-size: 60px;
 }
 
-.container__element h1:hover
+.container__element::before,
+.container__element::after {
+ content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-radial-gradient(
+    circle at center, 
+    #0ff 1px, 
+    transparent 2px, 
+    transparent 50px
+  );
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.container__element:hover::before {
+  transform: scale(2) rotate(45deg);
+  opacity: 0.3;
+}
+
+.container__element:hover::after {
+  transform: scale(2) rotate(-45deg);
+  opacity: 0.3;
+}
+
+.container__element:hover h1
 {
-    animation: myAnimation 0.8s infinite ;
+    animation: myAnimation 0.8s;
 }
 
 @keyframes myAnimation {
   0%   {transform: scale(1) rotateZ(0deg);}
-  100% {transform: scale(1.3) rotateZ(360deg)}
+  99% {transform: scale(1.5) rotateZ(360deg)}
+  100% {opacity: 0;}
 }
